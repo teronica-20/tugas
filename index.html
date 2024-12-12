@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tebak Angka</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Menu Burger -->
+    <div class="menu-burger" id="menu-burger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="#" onclick="showInstructions()">Petunjuk</a></li>
+            <li><a href="#" onclick="changeTheme()">Ganti Tema</a></li>
+            <li><a href="#" onclick="resetGame()">Mulai Lagi</a></li>
+            <li><a href="#" onclick="showLeaderboard()">Leaderboard</a></li>
+            <li><a href="#" onclick="showAchievements()">Pencapaian</a></li>
+        </ul>
+    </div>
+
+    <div class="game-container">
+        <h1>Tebak Angka</h1>
+        <p id="level-info">Level: 1</p>
+        <p id="max-number">Angka antara 1 dan 20</p>
+        <div class="game-info">
+            <p id="attempts-text">Tebakan tersisa: 5</p>
+            <input type="number" id="guess-input" placeholder="Masukkan tebakan" min="1">
+            <button id="submit-btn">Tebak</button>
+        </div>
+        <div id="feedback"></div>
+        <div class="progress-bar-container">
+            <div id="progress-fill"></div>
+        </div>
+        <button id="restart-btn">Mulai Lagi</button>
+    </div>
+
+    <!-- Pop-up Petunjuk -->
+    <div id="popup-instructions" class="popup">
+        <div class="popup-content">
+            <h2>Petunjuk Permainan</h2>
+            <p>Masukkan angka antara 1 dan angka maksimal yang ditentukan di setiap level. Setiap tebakan yang salah akan mengurangi tebakan tersisa. Cobalah menebak dengan cermat!</p>
+            <button onclick="closePopup()">Tutup</button>
+        </div>
+    </div>
+
+    <!-- Pop-up Leaderboard -->
+    <div id="popup-leaderboard" class="popup">
+        <div class="popup-content">
+            <h2>Leaderboard</h2>
+            <ul id="leaderboard-list">
+                <li>1. John - 100 poin</li>
+                <li>2. Jane - 85 poin</li>
+                <li>3. Doe - 75 poin</li>
+            </ul>
+            <button onclick="closePopup()">Tutup</button>
+        </div>
+    </div>
+
+    <!-- Pop-up Pencapaian -->
+    <div id="popup-achievements" class="popup">
+        <div class="popup-content">
+            <h2>Pencapaian Anda</h2>
+            <p><strong>Level 1: Selesai</strong></p>
+            <p><strong>Tanpa Kesalahan: 5 Poin</strong></p>
+            <button onclick="closePopup()">Tutup</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,262 @@
+/* Background Estetis dengan Gradient Animasi */
+body {
+    background: linear-gradient(45deg, #ff7e5f, #feb47b, #6a11cb, #2575fc);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+    font-family: 'Arial', sans-serif;
+    transition: background 0.5s ease;
+}
+
+/* Animasi Background Gradient */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Tema Gelap */
+body.dark-theme {
+    background: linear-gradient(45deg, #2e3b4e, #4b5e74, #4c536e, #202c3b);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+    font-family: 'Arial', sans-serif;
+    transition: background 0.5s ease; /* Transisi halus saat berubah */
+}
+
+/* Gaya untuk Tombol Ganti Tema */
+button {
+    background-color: #2575fc;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Gaya tombol Ganti Tema saat Hover */
+button:hover {
+    background-color: #feb47b;
+}
+
+/* Transisi untuk Navbar */
+.navbar {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    transition: background 0.5s ease;
+}
+
+/* Tombol Navbar saat Hover */
+.navbar a:hover {
+    color: #feb47b;
+}
+
+/* Pop-up dan Elemen Lainnya */
+.popup-content {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    color: white;
+    border-radius: 10px;
+}
+
+/* Transisi untuk Ganti Tema */
+.dark-theme .popup-content {
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+}
+
+.my-element {
+    transition: all 0.3s ease;
+}
+
+
+/* Menu Burger */
+.menu-burger {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+}
+
+.menu-burger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px 0;
+    background-color: #333;
+}
+
+/* Sidebar (Menu Samping) */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    padding-top: 50px;
+    transition: left 0.3s ease;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px 15px;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.sidebar ul li a:hover {
+    background-color: #575757;
+}
+
+/* Gaya kontainer permainan */
+.game-container {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+}
+
+.game-container h1 {
+    font-size: 36px;
+}
+
+.game-container p {
+    font-size: 20px;
+}
+
+.game-info {
+    margin: 20px 0;
+}
+
+/* Input dan Tombol */
+#guess-input {
+    padding: 10px;
+    font-size: 16px;
+    width: 150px;
+}
+
+#submit-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+#submit-btn:hover {
+    background-color: #45a049;
+}
+
+#feedback {
+    margin: 20px 0;
+    font-size: 18px;
+}
+
+.progress-bar-container {
+    width: 100%;
+    background-color: #ddd;
+    height: 10px;
+    margin: 10px 0;
+}
+
+#progress-fill {
+    width: 0;
+    height: 100%;
+    background-color: #4CAF50;
+}
+
+/* Tombol Mulai Lagi */
+#restart-btn {
+    display: none;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#restart-btn:hover {
+    background-color: #45a049;
+}
+
+/* Pop-up untuk Petunjuk, Leaderboard, dan Pencapaian */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+}
+
+.popup button {
+    background-color: #ff7e5f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.popup button:hover {
+    background-color: #feb47b;
+}
+
+/* Tema Gelap */
+.dark-theme {
+    background-color: #333;
+    color: white;
+}
+
+.dark-theme .game-container {
+    background-color: #444;
+}
+
+/* Leaderboard */
+.popup-content ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.popup-content ul li {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+/* Pencapaian */
+.popup-content p {
+    font-size: 16px;
+    margin: 10px 0;
+}
